@@ -1,7 +1,5 @@
 from field import Ant
-import numpy as np
 from PIL import Image
-import seaborn as sns
 
 
 field = (1024, 1024)
@@ -15,6 +13,6 @@ while True:
 
 
 data = Image.fromarray(ant.field.astype(dtype=bool))  # .convert('L')
-data.save("ant_field.bmp")
-print(sum(ant.field[ant.field == 1]))
-print(ant.field)
+data.save("ant_track.bmp")
+print("Quantity of black pixels =", (1024*1024) - sum(ant.field[ant.field == 1]))
+
