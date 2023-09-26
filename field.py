@@ -1,6 +1,7 @@
 import numpy as np
 
 
+
 class Ant:
 
     def __init__(self, field: tuple, coords: tuple):
